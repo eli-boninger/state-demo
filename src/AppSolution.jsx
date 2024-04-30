@@ -3,15 +3,7 @@ import HomePage from "./HomePage";
 import "../style/global.scss";
 
 const App = () => {
-  let isLoggedIn = false;
-
-  function logIn() {
-    isLoggedIn = true;
-  }
-
-  function logOut() {
-    isLoggedIn = false;
-  }
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <div class="app">
@@ -20,13 +12,12 @@ const App = () => {
       ) : (
         <>
           <h2>This is an app.</h2>
-          <button onClick={logIn}>Log in</button>
+          <button onClick={() => setIsLoggedIn(true)}>Log in</button>
         </>
       )}
-
       {isLoggedIn && (
         <div>
-          <a onClick={logOut}>Log out</a>
+          <a onClick={() => setIsLoggedIn(false)}>Log out</a>
         </div>
       )}
     </div>

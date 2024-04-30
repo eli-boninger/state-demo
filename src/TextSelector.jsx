@@ -6,18 +6,20 @@ export const TextSelector = () => {
   const possibleWords = ["broccoli", "sizzle", "charu"];
 
   return (
-    <>
+    <div>
       <h3>
         The selected word is{" "}
         <span className="selected-word">{selectedWord}</span>
       </h3>
-      {possibleWords.map((word) => (
-        <TextOption
-          option={word}
-          updateSelected={() => setSelectedWord(word)}
-          key={word}
-        />
-      ))}
-    </>
+      <div>
+        {possibleWords.map((word) => (
+          <TextOption
+            option={word}
+            updateSelected={() => setSelectedWord(word)}
+            key={word}
+          />
+        ))}
+      </div>
+    </div>
   );
 };

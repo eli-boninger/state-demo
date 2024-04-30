@@ -10,6 +10,17 @@ body {
     rgba(255, 255, 255, 1) 0%,
     rgba(9, 9, 121, 0.10968137254901966) 83%
   );
+  height: 100%;
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  align-items: center;
+  width: 100%;
 }
 
 h3 {
@@ -31,5 +42,16 @@ button {
   &:hover {
     color: white;
     background-color: black;
+  }
+}
+
+a {
+  color: black;
+  padding: 1rem;
+  border-radius: 2px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
   }
 }
