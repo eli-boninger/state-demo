@@ -6,7 +6,7 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
-    <div class="app">
+    <div className="app">
       {isLoggedIn ? (
         <HomePage />
       ) : (

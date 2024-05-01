@@ -14,7 +14,7 @@ const App = () => {
   }
 
   return (
-    <div class="app">
+    <div className="app">
       {isLoggedIn ? (
         <HomePage />
       ) : (

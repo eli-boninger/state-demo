@@ -1,3 +1,4 @@
+import { SelectedWord } from "./SelectedWord";
 import { TextOption } from "./TextOption";
 import { useState } from "react";
 
@@ -7,10 +8,7 @@ export const TextSelector = () => {
 
   return (
     <div>
-      <h3>
-        The selected word is{" "}
-        <span className="selected-word">{selectedWord}</span>
-      </h3>
+      <SelectedWord word={selectedWord} />
       <div>
         {possibleWords.map((word) => (
           <TextOption
