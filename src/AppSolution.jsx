@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div class="app">
       {isLoggedIn ? (
-        <HomePage />
+        <HomePage user={user} />
       ) : (
         <>
           <h2>This is an app.</h2>

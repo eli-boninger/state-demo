@@ -46,6 +46,19 @@ button {
   }
 }
 
+.option {
+  display: flex;
+  flex-direction: column;
+
+  &__color {
+    display: flex;
+  }
+}
+
+.options {
+  display: flex;
+}
+
 a {
   color: black;
   padding: 1rem;

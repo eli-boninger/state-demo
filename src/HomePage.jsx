@@ -3,9 +3,9 @@ import { TextSelector } from "./TextSelector";
 const HomePage = () => {
   return (
     <>
-      <main>
+      <div>
         <h2>Home page</h2>
-      </main>
+      </div>
       <TextSelector />
     </>
   );

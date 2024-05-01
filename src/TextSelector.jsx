@@ -1,22 +1,32 @@
-import { TextOption } from "./TextOption";
 import { useState } from "react";
+import { TextOption } from "./TextOption";
+import { SelectedWord } from "./SelectedWord";
 
 export const TextSelector = () => {
-  const [selectedWord, setSelectedWord] = useState("broccoli");
-  const possibleWords = ["broccoli", "sizzle", "charu"];
+  const [selectedWord, setSelectedWord] = useState({
+    text: "broccoli",
+    color: "blue",
+  });
+  const possibleWords = [
+    { text: "broccoli", colors: ["blue", "orange"] },
+    { text: "sizzle", colors: ["green", "yellow"] },
+    { text: "charu", colors: ["pink", "purple"] },
+  ];
 
   return (
     <div>
-      <h3>
-        The selected word is{" "}
-        <span className="selected-word">{selectedWord}</span>
-      </h3>
-      <div>
+      <SelectedWord word={selectedWord} />
+      <div className="options">
         {possibleWords.map((word) => (
           <TextOption
             option={word}
-            updateSelected={() => setSelectedWord(word)}
-            key={word}
+            key={word.text}
+            updateSelectedWord={(text) =>
+              setSelectedWord({ ...selectedWord, text: text })
+            }
+            updateSelectedColor={(color) =>
+              setSelectedWord({ ...selectedWord, color: color })
+            }
           />
         ))}
       </div>
